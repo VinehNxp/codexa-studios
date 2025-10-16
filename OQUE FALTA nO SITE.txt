@@ -1,0 +1,8 @@
+| 🧩 Tarefa                | 📌 Detalhe                                      |
+| ------------------------ | ----------------------------------------------- |
+| 🔗 Adicionar links reais | Instagram, WhatsApp, E-mail                     |
+| 🖼️ Trocar imagens       | Hero, serviços, portfólio, equipe               |
+| 💼 Atualizar projetos    | Colocar seus próprios sites/trabalhos           |
+| 🧠 Revisar textos        | Sobre, serviços, CTA e descrições               |
+| 🧰 Testar formulário     | Conferir se o Netlify Forms está captando dados |
+| 🌐 Publicar no Netlify   | Fazer o deploy final e testar em celular e PC   |
