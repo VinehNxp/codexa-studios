@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio CODEXA Studios — veja projetos, sites e soluções digitais criadas para nossos clientes.">
+  <title>Portfólio | CODEXA Studios</title>
+
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">CODEXA<span>Studios</span></div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="services.html">Serviços</a></li>
+          <li><a href="portfolio.html" class="active">Portfólio</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero portfolio-hero">
+    <div class="container hero-content fade-up">
+      <h1>Resultados que <span>falam por si</span></h1>
+      <p>Confira alguns dos projetos desenvolvidos pela CODEXA Studios e veja o impacto que o design e a performance podem causar.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="portfolio-section fade-up">
+    <div class="container">
+      <h2>Projetos em Destaque</h2>
+      <div class="portfolio-grid">
+        
+        <div class="portfolio-item">
+          <img src="assets/images/project1.png" alt="Projeto 1">
+          <div class="portfolio-info">
+            <h3>Site Institucional - Nexa Contabilidade</h3>
+            <p>Desenvolvimento de site profissional com foco em captação de leads e presença digital sólida.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="assets/images/project2.png" alt="Projeto 2">
+          <div class="portfolio-info">
+            <h3>Landing Page - Campanha Digital</h3>
+            <p>Página de alta conversão criada para lançamento de produto com integração de automação de e-mails.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="assets/images/project3.png" alt="Projeto 3">
+          <div class="portfolio-info">
+            <h3>E-commerce - FitStore</h3>
+            <p>Loja virtual completa com sistema de carrinho, pagamentos e layout otimizado para mobile.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="assets/images/project4.png" alt="Projeto 4">
+          <div class="portfolio-info">
+            <h3>Site de Consultoria - NextMind</h3>
+            <p>Criação de presença online moderna e confiável para consultoria de negócios e inovação.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials fade-up">
+    <div class="container">
+      <h2>O que nossos clientes dizem</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>"A CODEXA transformou nosso site em uma máquina de conversão. Atendimento impecável e entrega rápida!"</p>
+          <h4>— Mariana Silva, Nexa Contabilidade</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>"Design incrível e resultado acima do esperado. Já recomendei para vários parceiros!"</p>
+          <h4>— Bruno Costa, FitStore</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta fade-up">
+    <div class="container">
+      <h2>Quer seu projeto aqui também?</h2>
+      <a href="contact.html" class="btn-primary">Solicite um orçamento</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 CODEXA Studios. Todos os direitos reservados.</p>
+      <div class="social-links">
+        <a href="#"><img src="assets/icons/instagram-svgrepo-com.svg" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js">
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>

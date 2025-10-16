@@ -1,0 +1,293 @@
+/* =========================================
+   CODEXA STUDIOS — CONTATO
+   Estilo completo e otimizado
+========================================= */
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #0b0b0f;
+  line-height: 1.6;
+}
+
+/* ===== GLOBAL ===== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.btn-primary:hover {
+  background: #005ae0;
+}
+
+/* ===== ANIMAÇÕES ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Header ===== */
+.header {
+  width: 100%;
+  background: rgba(15, 15, 20, 0.95);
+  padding: 18px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.logo span {
+  color: #007bff;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav a {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav a:hover,
+.nav a.active {
+  color: #007bff;
+}
+
+/* ===== MENU MOBILE ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+.menu-toggle:hover {
+  color: #007bff;
+}
+
+.nav ul.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #0f0f15;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.nav ul.show li {
+  text-align: center;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ===== HERO (CONTATO) ===== */
+.contact-hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #0b0b0f, #141420);
+  text-align: center;
+  padding-top: 100px;
+}
+.contact-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+.contact-hero h1 span {
+  color: #007bff;
+}
+.contact-hero p {
+  color: #c9c9d4;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== SEÇÃO PRINCIPAL ===== */
+.contact-section {
+  padding: 100px 0;
+  background: #0f0f15;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* ===== FORMULÁRIO ===== */
+.contact-form,
+.contact-info {
+  background: #15151d;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h2,
+.contact-info h2 {
+  color: #007bff;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.contact-form label {
+  display: block;
+  color: #c9c9d4;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a24;
+  color: #fff;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+.contact-form button {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* ===== INFORMAÇÕES DE CONTATO ===== */
+.contact-info p {
+  color: #c9c9d4;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.contact-info a {
+  color: #007bff;
+  transition: color 0.3s;
+}
+.contact-info a:hover {
+  color: #005ae0;
+}
+.contact-info strong {
+  color: #fff;
+}
+
+/* ===== ÍCONES SOCIAIS ===== */
+.contact-info .social-links {
+  margin-top: 25px;
+}
+.contact-info .social-links a img {
+  width: 26px;
+  margin: 0 8px;
+  opacity: 0.8;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.contact-info .social-links a img:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: linear-gradient(90deg, #007bff, #005ae0);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0b0b0f;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer p {
+  color: #9b9b9b;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

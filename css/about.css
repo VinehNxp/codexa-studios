@@ -1,0 +1,479 @@
+/* ==============================
+   RESET E BASE
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0b0b0f;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* ===== Header ===== */
+.header {
+  width: 100%;
+  background: rgba(15, 15, 20, 0.95);
+  padding: 18px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo span {
+  color: #007bff;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav a {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #007bff;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to bottom right, #0b0b0f, #151525);
+  padding-top: 80px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #007bff;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #c9c9d4;
+  margin-bottom: 30px;
+}
+
+/* ==============================
+   BOTÕES
+============================== */
+.btn-primary {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #005ae0;
+}
+
+/* ==============================
+   SOBRE NÓS
+============================== */
+.about-section {
+  padding: 100px 0 60px;
+  text-align: center;
+  background: #0f0f15;
+}
+
+.about-section h2 {
+  font-size: 2.2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.05rem;
+  color: #c9c9d4;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ===== Missão / Visão / Valores ===== */
+.mission {
+  padding: 80px 0;
+  background: #101018;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.mission-card {
+  background: #151520;
+  padding: 40px 30px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+}
+
+.mission-card h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.mission-card p {
+  color: #c9c9d4;
+}
+
+/* ===== Time ===== */
+.team {
+  padding: 80px 0;
+  text-align: center;
+  background: #0f0f15;
+}
+
+.team h2 {
+  color: #007bff;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.team-member {
+  background: #151520;
+  border-radius: 12px;
+  padding: 30px;
+  transition: 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #007bff;
+}
+
+.team-member h3 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  color: #c9c9d4;
+}
+
+/* ==============================
+   SERVIÇOS
+============================== */
+.services {
+  padding: 100px 0;
+  background: #0b0b0f;
+  text-align: center;
+}
+
+.services h2 {
+  color: #007bff;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #151520;
+  padding: 35px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.service-card p {
+  color: #c9c9d4;
+}
+
+/* ==============================
+   PORTFÓLIO
+============================== */
+.portfolio {
+  padding: 100px 0;
+  background: #101018;
+  text-align: center;
+}
+
+.portfolio h2 {
+  color: #007bff;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #151520;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.project-card p {
+  color: #c9c9d4;
+  font-size: 0.95rem;
+}
+
+/* ==============================
+   CONTATO
+============================== */
+.contact {
+  padding: 100px 0;
+  text-align: center;
+  background: #0f0f15;
+}
+
+.contact h2 {
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact input,
+.contact textarea {
+  background: #151520;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  color: #fff;
+  font-family: inherit;
+}
+
+.contact textarea {
+  resize: none;
+  height: 150px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+.footer {
+  background: #0b0b0f;
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer p {
+  color: #9b9b9b;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+.social-links a img {
+  width: 24px;
+  margin: 0 10px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.social-links a img:hover {
+  opacity: 1;
+}
+
+
+/* ===== CTA ===== */
+.cta {
+  background: linear-gradient(90deg, #007bff, #005ae0);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 0;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .about-section h2,
+  .team h2 {
+    font-size: 2rem;
+  }
+
+  .mission-grid {
+    gap: 20px;
+  }
+
+  .team-grid {
+    gap: 25px;
+  }
+}
+
+
+/* ===== Mobile Menu (Placeholder) ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+  /* ===== Animações de entrada ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Menu Mobile (visível quando aberto) ===== */
+.nav ul.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #0f0f15;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav ul.show li {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+
+}

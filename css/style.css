@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #0b0b0f;
+  line-height: 1.6;
+}
+
+/* ===== EFEITO FADE-UP (Scroll Animation) ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Global ===== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: #005ae0;
+}
+
+/* ===== Header ===== */
+.header {
+  width: 100%;
+  background: rgba(15, 15, 20, 0.95);
+  padding: 18px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.logo span {
+  color: #007bff;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav a {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav a:hover,
+.nav a.active {
+  color: #007bff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom right, #0b0b0f, #141420);
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.hero h1 span {
+  color: #007bff;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #c9c9d4;
+}
+
+/* ===== Services ===== */
+.services {
+  padding: 100px 0;
+  text-align: center;
+  background: #0f0f15;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #15151d;
+  padding: 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.card:hover {
+  background: #1a1a24;
+  transform: translateY(-5px);
+}
+.card h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* ===== Portfolio ===== */
+.portfolio {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.portfolio h2 {
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.project img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: linear-gradient(90deg, #007bff, #005ae0);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 0;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #0b0b0f;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer p {
+  color: #9b9b9b;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+.social-links a img {
+  width: 24px;
+  margin: 0 10px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.social-links a img:hover {
+  opacity: 1;
+}
+
+
+
+
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .about-section h2,
+  .team h2 {
+    font-size: 2rem;
+  }
+
+  .mission-grid {
+    gap: 20px;
+  }
+
+  .team-grid {
+    gap: 25px;
+  }
+}
+
+
+/* ===== Mobile Menu (Placeholder) ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+  /* ===== Animações de entrada ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Menu Mobile (visível quando aberto) ===== */
+.nav ul.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #0f0f15;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav ul.show li {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+
+}
