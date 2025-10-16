@@ -4,7 +4,6 @@
 // ------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
-
   // ===== MENU MOBILE =====
   const menuToggle = document.querySelector("#mobile-menu");
   const nav = document.querySelector(".nav ul");
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ===== ANIMAÇÕES DE ENTRADA (Scroll) =====
+  // ===== ANIMAÇÕES DE ENTRADA =====
   const fadeElements = document.querySelectorAll(".fade-up");
 
   const appearOptions = {
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rootMargin: "0px 0px -50px 0px"
   };
 
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("appear");
@@ -51,39 +50,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, appearOptions);
 
-  fadeElements.forEach(el => {
-    appearOnScroll.observe(el);
-  });
+  fadeElements.forEach(el => appearOnScroll.observe(el));
 
-  document.addEventListener("DOMContentLoaded", () => {
+  // ===== FORMULÁRIO NETLIFY =====
   const form = document.querySelector("form[name='contact']");
   const statusOK = document.querySelector(".form-status");
   const statusError = document.querySelector(".form-error");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
 
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        body: data,
-      });
+      try {
+        const response = await fetch("/", {
+          method: "POST",
+          body: data,
+        });
 
-      if (response.ok) {
-        form.reset();
-        statusOK.style.display = "block";
-        statusError.style.display = "none";
-      } else {
+        if (response.ok) {
+          form.reset();
+          statusOK.style.display = "block";
+          statusError.style.display = "none";
+        } else {
+          statusOK.style.display = "none";
+          statusError.style.display = "block";
+        }
+      } catch (error) {
         statusOK.style.display = "none";
         statusError.style.display = "block";
       }
-    } catch (error) {
-      statusOK.style.display = "none";
-      statusError.style.display = "block";
-    }
-  });
-});
-
-
+    });
+  }
 });
