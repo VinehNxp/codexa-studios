@@ -48,7 +48,15 @@
       <!-- Contact Form -->
       <div class="contact-form">
         <h2>Envie uma mensagem</h2>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <!-- Campo oculto obrigatório -->
+  <input type="hidden" name="form-name" value="contact">
+
+  <!-- Honeypot invisível (anti-spam) -->
+  <p style="display:none;">
+    <label>Não preencha este campo: <input name="bot-field" /></label>
+  </p>
+
   <div class="form-group">
     <label for="name">Nome</label>
     <input type="text" id="name" name="name" required>
@@ -64,19 +72,16 @@
     <textarea id="message" name="message" rows="5" required></textarea>
   </div>
 
-  <!-- Campo oculto obrigatório para o Netlify Forms -->
-  <input type="hidden" name="form-name" value="contact">
-
   <button type="submit" class="btn-primary">Enviar Mensagem</button>
 
   <p class="form-status" style="display:none; color:#0f0; margin-top:10px;">
-  ✅ Mensagem enviada com sucesso!
-</p>
-<p class="form-error" style="display:none; color:#f33; margin-top:10px;">
-  ❌ Ocorreu um erro. Tente novamente.
-</p>
-
+    ✅ Mensagem enviada com sucesso!
+  </p>
+  <p class="form-error" style="display:none; color:#f33; margin-top:10px;">
+    ❌ Ocorreu um erro. Tente novamente.
+  </p>
 </form>
+
 
       </div>
 
@@ -88,7 +93,7 @@
         <p>📍 <strong>Localização:</strong> Atendimento 100% online — Brasil e exterior</p>
 
         <div class="social-links">
-          <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+          <a href="#"><img src="assets/icons/instagram-svgrepo-com.svg" alt="Instagram"></a>
         </div>
       </div>
     </div>
